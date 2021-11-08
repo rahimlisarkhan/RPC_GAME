@@ -1,9 +1,7 @@
 //Global General Variables
-
 let gameData = ['r', 'p', 's']
 let player1Point = 0
 let player2Point = 0
-
 
 //Play Intro
 const playIntro = () => {
@@ -153,12 +151,10 @@ const playResult = (player1, player2) => {
     }
 }
 
-
 //Play Game
 const playGame = (event) => {
     realPlayerAttack = event.key
     compRandomAttack = randomGameAttack(gameData)
-
 
     if (gameData.indexOf(realPlayerAttack) !== -1) {
         playResult(realPlayerAttack, compRandomAttack)
@@ -168,5 +164,6 @@ const playGame = (event) => {
 }
 
 
+//Run App
 window.onkeypress = playGame
 playIntro()
